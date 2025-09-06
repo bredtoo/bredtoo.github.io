@@ -1,4 +1,9 @@
 /* Reset default browser styles */
+@font-face {
+    font-family: 'liquify';
+    src: url(liquify.regular.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,82 +13,14 @@
 /* Body styles and background */
 body {
     min-height: 100vh;
-    background-image: url(fatrat.png);
+    background-color: #060f08;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     font-family: "Nunito", sans-serif;
 }
 
-/* Main heading styles */
-h1 {
-    padding: 80px;
-    font-size: 80px;
-    text-align: center;
-    color: yellow;
-}
-
-h2 {
-    padding: 0px;
-    font-size: 30px;
-    text-align: center;
-    color: orange;
-}
-
-/* Navbar container styles */
-nav {
-    background-color: yellow;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Navbar list styles (horizontal layout) */
-nav ul {
-    width: 100%;
-    list-style: none;
-    display: flex; /* lays out nav items in a row */
-    justify-content: flex-end; /* aligns nav items to the right */
-    align-items: center; /* vertically centers nav items */
-}
-
-/* Navbar list item styles */
-nav li {
-    height: 50px;
-    padding: 0 10px;
-    text-decoration: none;
-    display: flex; /* aligns content inside each nav item */
-    align-items: center; /* vertically centers content */
-    color: black;
-}
-
-/* Navbar link styles */
-nav a {
-    text-decoration: none; /* removes underline from links */
-    display: flex; /* aligns content inside each link */
-    height: 100%;
-    padding: 0 30px; /* horizontal spacing for links */
-    align-items: center; /* vertically centers link content */
-    color: black;
-}
-
-/* Navbar link hover effect */
-nav a:hover {
-    background-color: orange; /* highlights link on hover */
-    transition: 0.3s;
-}
-
-/* Pushes the first nav item (cheesy image) to the left */
-nav li:first-child {
-    margin-right: auto;
-}
-
-/* Prevents cheesy image from getting background on hover */
-nav a:hover .cheesy {
-    background-color: transparent;
-}
-
-/* Cheesy image styles */
-.cheesy {
-    height: 40px;
-    display: flex;
-    align-items: center;
+.index-page {
+    height: 100vh;
+    overflow: hidden;
 }
