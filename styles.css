@@ -8,20 +8,47 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #050f29;
 }
 
-/* Body styles and background */
-body {
-    min-height: 100vh;
-    background-color: #050f29;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: "Nunito", sans-serif;
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;          
+  justify-content: center; 
+}
+
+nav li {
+  margin: 10px 30px; 
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  color: #204e8a;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;        
+  border-radius: 30px;        
+  transition: all 0.3s ease;  
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); 
+}
+
+.navbar a {
+    color: #204e8a;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+background-color: #204e8a; 
+  color: #fff;
+  transform: translateY(-2px); 
 }
 
 .index-page {
-    height: 100vh;
     overflow: hidden;
 }
 
@@ -30,7 +57,7 @@ body {
     font-size: 60px;
     width: 100%;
     height: 100%;
-    fill: #131e3b;
+    fill: #1e2b52;
 }
 
 .curvedname text {
@@ -39,9 +66,9 @@ body {
 }
 
 @keyframes pulseColor {
-    0%   { fill: #112d52; }   
-    25%  { fill: #184177; }   
-    50%  { fill: #21569c; }   
-    75%  { fill: #184177; }   
-    100% { fill: #112d52; }   
+    0%   { fill: #1e2b52; }   
+    25%  { fill: #204e8a; }   
+    50%  { fill: #3f79c5; }   
+    75%  { fill: #204e8a; }    
+    100% { fill: #1e2b52; }
 }
