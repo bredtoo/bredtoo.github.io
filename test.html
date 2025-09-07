@@ -4,27 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Homepage</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="index-page">
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>  
             <li><a href="profile.html">Profile</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="dashboard.html">Dashboard</a></li>
             <li><a href="faq.html">FAQ</a></li>
         </ul>
     </nav>
-    <h1></h1>
-    <h2></h2>
+
+    <div class="curvedname">
+            <svg viewBox="0 0 425 300">
+                <path id="curve" d="M-1,100 C120,-100, 300,350, 450,50" stroke="transparent" fill="transparent" />
+                <text x="20">
+                    <textPath class="name" href="#curve" textLength="485" lengthAdjust="spacing">
+                        Joshua van Avesaath
+                    </textPath>
+                </text>
+            </svg>
+    </div>
+
+    <main>
+        <div id="welcome">
+        <h1> WELCOME TO MY WEBSITE!</h1>
+        <p> click the links to see what happens!</p>
+        </div>
+        <h2></h2>
+    </main>
 </body>
 
 </html>
