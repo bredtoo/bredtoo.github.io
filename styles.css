@@ -13,7 +13,7 @@
 /* Body styles and background */
 body {
     min-height: 100vh;
-    background-color: #060f08;
+    background-color: #050f29;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,4 +23,25 @@ body {
 .index-page {
     height: 100vh;
     overflow: hidden;
+}
+
+.curvedname {
+    font-family: 'liquify', sans-serif;
+    font-size: 60px;
+    width: 100%;
+    height: 100%;
+    fill: #131e3b;
+}
+
+.curvedname text {
+    animation: pulseColor 3s infinite linear;
+    fill: #39ff14;
+}
+
+@keyframes pulseColor {
+    0%   { fill: #112d52; }   
+    25%  { fill: #184177; }   
+    50%  { fill: #21569c; }   
+    75%  { fill: #184177; }   
+    100% { fill: #112d52; }   
 }
