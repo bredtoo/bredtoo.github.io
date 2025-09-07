@@ -45,7 +45,7 @@ nav a {
 .navbar a:hover {
 background-color: #204e8a; 
   color: #fff;
-  transform: translateY(-2px); 
+  transform: translateY(-2px);
 }
 
 .index-page {
