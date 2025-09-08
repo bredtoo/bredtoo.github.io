@@ -1,14 +1,37 @@
-/* Reset default browser styles */
+/* default browser style */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #050f29
+}
+
 @font-face {
     font-family: 'liquify';
     src: url(liquify.regular.otf);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #050f29;
+table, th, td {
+    border: 15px solid transparent;
+    border-collapse: collapse;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    padding: 8px;
+    width: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr:nth-child(even) {
+    background-color: #192d5f;
+}
+
+tr:nth-child(odd) {
+    background-color: #001753;
 }
 
 nav ul {
