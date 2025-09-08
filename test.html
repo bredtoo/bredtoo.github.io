@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Test</title>
+<style>
+  /* Make sure html, body, and main fill the viewport */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
+  main {
+    height: 100%;
+  }
 
-    <link rel="stylesheet" href="styles.css">
+  /* Flex container */
+  .container1 {
+    display: flex;
+    justify-content: flex-start; /* align left */
+    align-items: flex-end;       /* align bottom */
+    height: 100%;
+    padding: 80px 20px;          /* float above bottom-left */
+    box-sizing: border-box;
+    padding: 10% 50% 10% 3%;
+  }
+
+  /* Text styling */
+  .welcome {
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    color: #204e8a;
+    font-size: clamp(18px, 2vw, 25px);
+    text-align: center;
+  }
+
+  .welcome h1 {
+    margin: 0 0 10px 0;
+  }
+
+  .welcome p {
+    margin: 5px 0;
+  }
+</style>
 </head>
-
-<body class="index-page">
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>  
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
-    </nav>
-
-    <div class="curvedname">
-            <svg viewBox="0 0 425 300">
-                <path id="curve" d="M-1,100 C120,-100, 300,350, 450,50" stroke="transparent" fill="transparent" />
-                <text x="20">
-                    <textPath class="name" href="#curve" textLength="485" lengthAdjust="spacing">
-                        Joshua van Avesaath
-                    </textPath>
-                </text>
-            </svg>
+<body>
+<main>
+  <div class="container1">
+    <div class="welcome">
+      <h1>WELCOME TO MY WEBSITE!</h1>
+      <p>Click the buttons above to view my pages!</p>
+      <p>I hope you like it! :D</p>
     </div>
-
-    <main>
-        <div id="welcome">
-        <h1> WELCOME TO MY WEBSITE!</h1>
-        <p> click the links to see what happens!</p>
-        </div>
-        <h2></h2>
-    </main>
+  </div>
+</main>
 </body>
-
 </html>
