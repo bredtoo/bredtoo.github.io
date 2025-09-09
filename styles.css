@@ -51,8 +51,11 @@ main {
 
     width: 100%;
     /* full viewport width */
-    height: 100%;
-    /* full viewport height */
+    height: 100%; 
+}
+
+.profilegrid h1 {
+    color: #f88cf3;
 }
 
 /* =========================
@@ -73,6 +76,7 @@ main {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr auto;
+    
 
 
     gap: 20px;
