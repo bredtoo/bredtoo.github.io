@@ -22,6 +22,12 @@ body {
     src: url(liquify.regular.otf);
 }
 
+.navbar a.active {
+    background-color: #204e8a;  /* makes the background of the link dark blue */
+    color: #fff;                /* makes the text white */
+    transform: translateY(-2px); /* moves the link up 2 pixels for a “pressed/lifted” effect */
+}
+
 /* =========================
    2. Tables
 ========================= */
