@@ -14,6 +14,7 @@ body {
     box-sizing: border-box;
     background-color: #050f29;
 }
+/* temp. color = #ffffff Main color = #050f29 */
 
 /* Font Faces */
 @font-face {
@@ -109,6 +110,24 @@ nav a {
     box-sizing: border-box;
 }
 
+.container3 {
+    display: flex;
+    justify-content: flex-end;    /* align right */
+    align-items: flex-start;      /* align top */
+    height: 100%;
+    padding: 80px 50px 0 20px;   /* top, right, bottom, left */
+    box-sizing: border-box;
+}
+
+.container4 {
+    display: flex;
+    justify-content: center;      /* align center */
+    align-items: flex-start;          /* align center */
+    height: 100%;
+    padding: 40px 20px 0 20px;      /* top, right, bottom, left */
+    box-sizing: border-box;
+}
+
 /* =========================
    6. Flex Items / Text Blocks
 ========================= */
@@ -153,6 +172,35 @@ nav a {
     fill: #39ff14;
 }
 
+.text-changer {
+    height: 40px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    color: #204e8a;
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    box-sizing: content-box;
+    transform: scale(3);
+}
+
+.intro-text {
+    margin-top: -2px;
+}
+
+.roles-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.role {
+    display: block;
+    height: 100%;
+    padding-left: 6px;
+    color: #f88cf3;
+    animation: role-change 5s infinite;
+}
 /* =========================
    8. Animations
 ========================= */
@@ -162,4 +210,15 @@ nav a {
     50%  { fill: #3f79c5; }   
     75%  { fill: #204e8a; }    
     100% { fill: #1e2b52; }
+}
+
+@keyframes role-change {
+  10%   { transform: translateY(-102%); }
+  25%   { transform: translateY(-100%); }
+  35%   { transform: translateY(-202%); }
+  50%   { transform: translateY(-200%); }
+  60%   { transform: translateY(-302%); }
+  75%   { transform: translateY(-300%); }
+  85%   { transform: translateY(-402%); }
+  100%  { transform: translateY(-400%); }
 }
