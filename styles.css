@@ -23,9 +23,9 @@ body {
 }
 
 .navbar a.active {
-    background-color: #204e8a;  /* makes the background of the link dark blue */
-    color: #fff;                /* makes the text white */
-    transform: translateY(-2px); /* moves the link up 2 pixels for a “pressed/lifted” effect */
+    background-color: #f88cf3; 
+    color: #fff;                
+    transform: translateY(-2px); 
 }
 
 /* =========================
@@ -174,7 +174,7 @@ nav a {
 }
 
 .curvedname text {
-    animation: pulseColor 3s infinite linear;
+    animation: pulseColor 5s infinite linear;
     fill: #39ff14;
 }
 
@@ -211,11 +211,15 @@ nav a {
    8. Animations
 ========================= */
 @keyframes pulseColor {
-    0%   { fill: #1e2b52; }   
-    25%  { fill: #204e8a; }   
-    50%  { fill: #3f79c5; }   
-    75%  { fill: #204e8a; }    
-    100% { fill: #1e2b52; }
+    0%   { fill: #5569d1; }   /* start soft violet-blue */
+    20%  { fill: #7a7fff; }   
+    30%  { fill: #a66cff; }   
+    40%  { fill: #d181ff; }   
+    50%  { fill: #ff7ff5; }   /* vibrant pink peak */
+    60%  { fill: #d181ff; }   
+    70%  { fill: #a66cff; }   
+    80%  { fill: #7a7fff; }   
+    100% { fill: #5569d1; }   /* back to soft violet-blue */
 }
 
 @keyframes role-change {
