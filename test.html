@@ -4,56 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flexbox Test</title>
-<style>
-  /* Make sure html, body, and main fill the viewport */
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  main {
-    height: 100%;
-  }
-
-  /* Flex container */
-  .container1 {
-    display: flex;
-    justify-content: flex-start; /* align left */
-    align-items: flex-end;       /* align bottom */
-    height: 100%;
-    padding: 80px 20px;          /* float above bottom-left */
-    box-sizing: border-box;
-    padding: 10% 50% 10% 3%;
-  }
-
-  /* Text styling */
-  .welcome {
-    width: 100%;
-    font-family: 'Nunito', sans-serif;
-    color: #204e8a;
-    font-size: clamp(18px, 2vw, 25px);
-    text-align: center;
-  }
-
-  .welcome h1 {
-    margin: 0 0 10px 0;
-  }
-
-  .welcome p {
-    margin: 5px 0;
-  }
-</style>
 </head>
 <body>
 <main>
-  <div class="container1">
-    <div class="welcome">
-      <h1>WELCOME TO MY WEBSITE!</h1>
-      <p>Click the buttons above to view my pages!</p>
-      <p>I hope you like it! :D</p>
-    </div>
+<style>
+
+.image-text-container {
+  display: flex;          /* enables flexbox layout */
+  align-items: center;    /* vertically center text relative to image */
+  gap: 20px;              /* space between image and text */
+  flex-direction: row-reverse;
+}
+
+.image-text-container img {
+  width: 200px;           /* fixed or responsive width */
+  height: auto;
+  object-fit: cover;      /* fills the image nicely */
+  fe
+}
+
+.image-text-container .text {
+  flex: 1;                /* allows text to take remaining space */
+}
+
+.text {
+  text-align: left;
+}
+  
+</style>
+
+
+<div class="image-text-container">
+  <img src="hzlogo.png" alt="Example Image">
+  <div class="text">
+    <h2>Title Here</h2>
+    <p>Some descriptive text goes here.</p>
   </div>
+</div>
+
+
 </main>
 </body>
 </html>

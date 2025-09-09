@@ -8,9 +8,6 @@ html, body, main {
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
     box-sizing: border-box;
     background-color: #050f29;
 }
@@ -129,7 +126,7 @@ nav a {
 /* =========================
    5. Flex Containers
 ========================= */
-.container1 {
+.welcomepos {
     display: flex;
     justify-content: flex-start;  /* align left */
     align-items: flex-end;        /* align bottom */
@@ -138,10 +135,10 @@ nav a {
     box-sizing: border-box;
 }
 
-.container2 {
+.overherepos {
     display: flex;
-    justify-content: flex-end;    /* align right */
-    align-items: flex-start;      /* align top */
+    justify-content: flex-end;    
+    align-items: flex-start;
     height: 100%;
     padding: 80px 50px 0 20px;   /* top, right, bottom, left */
     box-sizing: border-box;
@@ -149,18 +146,18 @@ nav a {
 
 .container3 {
     display: flex;
-    justify-content: flex-end;    /* align right */
-    align-items: flex-start;      /* align top */
+    justify-content: flex-end;    
+    align-items: flex-start;      
     height: 100%;
     padding: 80px 50px 0 20px;   /* top, right, bottom, left */
     box-sizing: border-box;
 }
 
-.container4 {
+.rolespos {
     display: flex;
-    justify-content: center;      /* align center */
-    align-items: flex-start;          /* align center */
-    height: 100%;
+    justify-content: center;      
+    align-items: flex-start;          
+    height: auto;
     padding: 40px 20px 0 130px;      /* top, right, bottom, left */
     box-sizing: border-box;
 }
@@ -174,7 +171,7 @@ nav a {
     color: #204e8a;
     font-size: clamp(18px, 2vw, 25px);
     pointer-events: none;
-    text-align: center; /* for internal text centering */
+    text-align: center; 
 }
 
 /* =========================
@@ -238,19 +235,20 @@ nav a {
     color: #f88cf3;
     animation: role-change 5s infinite;
 }
+
 /* =========================
    8. Animations
 ========================= */
 @keyframes pulseColor {
-    0%   { fill: #5569d1; }   /* start soft violet-blue */
+    0%   { fill: #5569d1; }   
     20%  { fill: #7a7fff; }   
     30%  { fill: #a66cff; }   
     40%  { fill: #d181ff; }   
-    50%  { fill: #ff7ff5; }   /* vibrant pink peak */
+    50%  { fill: #ff7ff5; }  
     60%  { fill: #d181ff; }   
     70%  { fill: #a66cff; }   
     80%  { fill: #7a7fff; }   
-    100% { fill: #5569d1; }   /* back to soft violet-blue */
+    100% { fill: #5569d1; }   
 }
 
 @keyframes role-change {
