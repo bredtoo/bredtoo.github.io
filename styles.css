@@ -1,17 +1,34 @@
 /* =========================
    1. Base / Reset / Defaults
 ========================= */
-html, body, main {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body,
+{
+height: 100%;
+width: 100%;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
 }
 
 body {
-    box-sizing: border-box;
     background-color: #050f29;
 }
+
+main {
+    height: auto;
+    /* let content decide */
+    overflow: visible;
+    /* don’t create its own scroll */
+    display: block;
+    /* ensure normal flow */
+}
+
 /* temp. color = #ffffff Main color = #050f29 */
 
 /* Font Faces */
@@ -27,59 +44,54 @@ body {
 .profilegrid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 0px;
-    
-    width: 100vw;   /* full viewport width */
-    height: 100vh;  /* full viewport height */
+    grid-template-rows: repeat(12, auto);
+    gap: 8px;
+    align-items: center;
 
+
+    width: 100%;
+    /* full viewport width */
+    height: 100%;
+    /* full viewport height */
 }
 
 /* =========================
    2. Grid Items
 ========================= */
-    
-.hzlogo-pic{
-    grid-column: span 3 / span 3;
+
+.div1 {
+    grid-column: span 12 / span 12;
     grid-row: span 3 / span 3;
-    grid-column-start: 10;
-    grid-row-start: 2;
+    padding: 10px;
 
-    justify-self: center;  /* horizontal */
-    align-self: center; 
-
-    width: 300px;
-    height: auto;
-    scale: 1.5;
 }
 
-.hz-txt {
-    grid-column: span 5 / span 5;
-    grid-row: span 3 / span 3;
-    grid-column-start: 5;
-    grid-row-start: 1;
-
-    justify-self: right;  /* horizontal */
-    align-self: right;
-    text-align: right;
-
-
-    color: #5990da;
-    font-family: 'Nunito', sans-serif;
-    font-size: clamp(18px, 2vw, 25px);
-}
-
-.mygf-pic {
-    grid-column: span 3 / span 3;
+.div2 {
+    grid-column: span 12 / span 12;
     grid-row: span 3 / span 3;
     grid-row-start: 4;
+
+
+    gap: 20px;
+
+    background-color: #0b2055;
+    border-radius: 10px;
+
 }
 
-.mygf-txt {
-    grid-column: span 5 / span 5;
+.div3 {
+    grid-column: span 12 / span 12;
     grid-row: span 3 / span 3;
-    grid-column-start: 4;
-    grid-row-start: 4;
+    grid-row-start: 7;
+}
+
+.div4 {
+    grid-column: span 12 / span 12;
+    grid-row: span 3 / span 3;
+    grid-row-start: 10;
+
+    background-color: #0b2055;
+    border-radius: 10px;
 }
 
 
@@ -87,7 +99,9 @@ body {
 /* =========================
    2. Tables
 ========================= */
-table, th, td {
+table,
+th,
+td {
     border: 15px solid transparent;
     border-collapse: collapse;
     border-radius: 10px;
@@ -101,8 +115,13 @@ table, th, td {
     margin-right: auto;
 }
 
-tr:nth-child(even) { background-color: #192d5f; }
-tr:nth-child(odd)  { background-color: #001753; }
+tr:nth-child(even) {
+    background-color: #192d5f;
+}
+
+tr:nth-child(odd) {
+    background-color: #001753;
+}
 
 /* =========================
    3. Navigation / Navbar
@@ -129,7 +148,7 @@ nav a {
     padding: 10px 25px;
     border-radius: 30px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .navbar a {
@@ -139,7 +158,7 @@ nav a {
 }
 
 .navbar a:hover {
-    background-color: #204e8a; 
+    background-color: #204e8a;
     color: #fff;
     transform: translateY(-2px);
 }
@@ -147,36 +166,32 @@ nav a {
 .navbar a.active {
     color: #fff;
     transform: translateY(-2px);
-    background: linear-gradient(
-        90deg,
-        #5569d1,
-        #7a7fff,
-        #a66cff,
-        #d181ff,
-        #ff7ff5,
-        #d181ff,
-        #a66cff,
-        #7a7fff,
-        #5569d1
-    );
+    background: linear-gradient(90deg,
+            #5569d1,
+            #7a7fff,
+            #a66cff,
+            #d181ff,
+            #ff7ff5,
+            #d181ff,
+            #a66cff,
+            #7a7fff,
+            #5569d1);
     background-size: 300% 300%;
     animation: gradientFlow 10s linear infinite;
 }
 
 .navbar a.active:hover {
     color: #fff;
-    background: linear-gradient(
-        90deg,
-        #5569d1,
-        #7a7fff,
-        #a66cff,
-        #d181ff,
-        #ff7ff5,
-        #d181ff,
-        #a66cff,
-        #7a7fff,
-        #5569d1
-    );
+    background: linear-gradient(90deg,
+            #5569d1,
+            #7a7fff,
+            #a66cff,
+            #d181ff,
+            #ff7ff5,
+            #d181ff,
+            #a66cff,
+            #7a7fff,
+            #5569d1);
     background-size: 300% 300%;
     animation: gradientFlow 10s linear infinite;
 }
@@ -193,37 +208,44 @@ nav a {
 ========================= */
 .welcomepos {
     display: flex;
-    justify-content: flex-start;  /* align left */
-    align-items: flex-end;        /* align bottom */
-    height: 100%;                 /* fill parent height */
-    padding: 0 20px 170px 50px;  /* top, right, bottom, left */
+    justify-content: flex-start;
+    /* align left */
+    align-items: flex-end;
+    /* align bottom */
+    height: 100%;
+    /* fill parent height */
+    padding: 0 20px 170px 50px;
+    /* top, right, bottom, left */
     box-sizing: border-box;
 }
 
 .overherepos {
     display: flex;
-    justify-content: flex-end;    
+    justify-content: flex-end;
     align-items: flex-start;
     height: 100%;
-    padding: 80px 50px 0 20px;   /* top, right, bottom, left */
+    padding: 80px 50px 0 20px;
+    /* top, right, bottom, left */
     box-sizing: border-box;
 }
 
 .container3 {
     display: flex;
-    justify-content: flex-end;    
-    align-items: flex-start;      
+    justify-content: flex-end;
+    align-items: flex-start;
     height: 100%;
-    padding: 80px 50px 0 20px;   /* top, right, bottom, left */
+    padding: 80px 50px 0 20px;
+    /* top, right, bottom, left */
     box-sizing: border-box;
 }
 
 .rolespos {
     display: flex;
-    justify-content: center;      
-    align-items: flex-start;          
+    justify-content: center;
+    align-items: flex-start;
     height: auto;
-    padding: 40px 20px 0 130px;      /* top, right, bottom, left */
+    padding: 40px 20px 0 130px;
+    /* top, right, bottom, left */
     box-sizing: border-box;
 }
 
@@ -236,7 +258,7 @@ nav a {
     color: #204e8a;
     font-size: clamp(18px, 2vw, 25px);
     pointer-events: none;
-    text-align: center; 
+    text-align: center;
 }
 
 /* =========================
@@ -271,6 +293,7 @@ nav a {
     fill: #39ff14;
 }
 
+
 .text-changer {
     height: 40px;
     padding: 10px;
@@ -301,39 +324,119 @@ nav a {
     animation: role-change 5s infinite;
 }
 
-.studentintro {
-    color: #a6c1e5;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 700;
+.hzlogo {
+    width: 300px;
+    float: left;
+    shape-outside: circle(50%);
 }
+
+.hztext {
+    font-family: 'Nunito', sans-serif;
+    pointer-events: none;
+    color: #204e8a;
+    font-size: 30px;
+    max-width: 1150px;
+}
+
+
+.mygftext {
+    font-family: 'Nunito', sans-serif;
+    color: #204e8a;
+    font-size: 30px;
+    max-width: 1150px;
+    text-align: right;
+}
+
+.mygf {
+    width: 600px;
+    height: auto;
+    border-radius: 20px;
+    float: right;
+    padding: 10px;
+}
+
 
 /* =========================
    8. Animations
 ========================= */
 @keyframes pulseColor {
-    0%   { fill: #5569d1; }   
-    20%  { fill: #7a7fff; }   
-    30%  { fill: #a66cff; }   
-    40%  { fill: #d181ff; }   
-    50%  { fill: #ff7ff5; }  
-    60%  { fill: #d181ff; }   
-    70%  { fill: #a66cff; }   
-    80%  { fill: #7a7fff; }   
-    100% { fill: #5569d1; }   
+    0% {
+        fill: #5569d1;
+    }
+
+    20% {
+        fill: #7a7fff;
+    }
+
+    30% {
+        fill: #a66cff;
+    }
+
+    40% {
+        fill: #d181ff;
+    }
+
+    50% {
+        fill: #ff7ff5;
+    }
+
+    60% {
+        fill: #d181ff;
+    }
+
+    70% {
+        fill: #a66cff;
+    }
+
+    80% {
+        fill: #7a7fff;
+    }
+
+    100% {
+        fill: #5569d1;
+    }
 }
 
 @keyframes role-change {
-  10%   { transform: translateY(-102%); }
-  25%   { transform: translateY(-100%); }
-  35%   { transform: translateY(-202%); }
-  50%   { transform: translateY(-200%); }
-  60%   { transform: translateY(-302%); }
-  75%   { transform: translateY(-300%); }
-  85%   { transform: translateY(-402%); }
-  100%  { transform: translateY(-400%); }
+    10% {
+        transform: translateY(-102%);
+    }
+
+    25% {
+        transform: translateY(-100%);
+    }
+
+    35% {
+        transform: translateY(-202%);
+    }
+
+    50% {
+        transform: translateY(-200%);
+    }
+
+    60% {
+        transform: translateY(-302%);
+    }
+
+    75% {
+        transform: translateY(-300%);
+    }
+
+    85% {
+        transform: translateY(-402%);
+    }
+
+    100% {
+        transform: translateY(-400%);
+    }
 }
 
 @keyframes gradientFlow {
-    0%   { background-position: 0% 50%; }
-    100% { background-position: 300% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
 }
