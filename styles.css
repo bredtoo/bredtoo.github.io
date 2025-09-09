@@ -83,16 +83,42 @@ nav a {
 }
 
 .navbar a.active {
-    background-color: #f88cf3; 
-    color: #fff;                
-    transform: translateY(-2px); 
+    color: #fff;
+    transform: translateY(-2px);
+    background: linear-gradient(
+        90deg,
+        #5569d1,
+        #7a7fff,
+        #a66cff,
+        #d181ff,
+        #ff7ff5,
+        #d181ff,
+        #a66cff,
+        #7a7fff,
+        #5569d1
+    );
+    background-size: 300% 300%;
+    animation: gradientFlow 10s linear infinite;
 }
 
 .navbar a.active:hover {
-    background-color: #f88cf3; 
     color: #fff;
-    transform: translateY(-2px);
+    background: linear-gradient(
+        90deg,
+        #5569d1,
+        #7a7fff,
+        #a66cff,
+        #d181ff,
+        #ff7ff5,
+        #d181ff,
+        #a66cff,
+        #7a7fff,
+        #5569d1
+    );
+    background-size: 300% 300%;
+    animation: gradientFlow 10s linear infinite;
 }
+
 /* =========================
    4. Utility / Page
 ========================= */
@@ -135,7 +161,7 @@ nav a {
     justify-content: center;      /* align center */
     align-items: flex-start;          /* align center */
     height: 100%;
-    padding: 40px 20px 0 20px;      /* top, right, bottom, left */
+    padding: 40px 20px 0 130px;      /* top, right, bottom, left */
     box-sizing: border-box;
 }
 
@@ -236,4 +262,9 @@ nav a {
   75%   { transform: translateY(-300%); }
   85%   { transform: translateY(-402%); }
   100%  { transform: translateY(-400%); }
+}
+
+@keyframes gradientFlow {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
 }
