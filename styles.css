@@ -22,12 +22,6 @@ body {
     src: url(liquify.regular.otf);
 }
 
-.navbar a.active {
-    background-color: #f88cf3; 
-    color: #fff;                
-    transform: translateY(-2px); 
-}
-
 /* =========================
    2. Tables
 ========================= */
@@ -88,6 +82,17 @@ nav a {
     transform: translateY(-2px);
 }
 
+.navbar a.active {
+    background-color: #f88cf3; 
+    color: #fff;                
+    transform: translateY(-2px); 
+}
+
+.navbar a.active:hover {
+    background-color: #f88cf3; 
+    color: #fff;
+    transform: translateY(-2px);
+}
 /* =========================
    4. Utility / Page
 ========================= */
