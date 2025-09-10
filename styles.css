@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-
 html,
 body,
 {
@@ -37,6 +36,15 @@ main {
     src: url(liquify.regular.otf);
 }
 
+@font-face {
+  font-family: 'mayego';
+  src: url('mayego-demo.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'mochibop';
+  src: url('mochibopbold-demo.ttf') format('truetype');
+}
 /* =========================
    2. Grid Layout
 ========================= */
@@ -55,6 +63,10 @@ main {
     color: #f88cf3;
     font-weight: 1000; 
     font-family: liquify;
+}
+
+.grid p {
+    font-family: mochibop;
 }
 
 /* =========================
@@ -137,7 +149,7 @@ td {
     border-collapse: collapse;
     border-radius: 10px;
     color: white;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'mochibopbold', sans-serif;
     text-align: center;
     padding: 8px;
     width: auto;
@@ -292,19 +304,16 @@ decoration
 }
 
 .welcometext {
-    font-family: 'Nunito', sans-serif;
     color: #204e8a;
     font-size: 45px;
     pointer-events: none;
     text-align: center;
     font-weight: 850;
-
 }
 
-.overhere {
-    font-family: 'Nunito', sans-serif;
-    color: #204e8a;
+.overheretext {
     font-size: clamp(18px, 2vw, 25px);
+    rotate: 10deg;
     pointer-events: none;
     text-align: center;
 }
