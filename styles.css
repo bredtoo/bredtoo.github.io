@@ -41,21 +41,20 @@ main {
    2. Grid Layout
 ========================= */
 
-.profilegrid {
+.grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, auto);
     gap: 8px;
     align-items: center;
-
-
     width: 100%;
-    /* full viewport width */
     height: 100%;
 }
 
-.profilegrid h1 {
+.grid h1 {
     color: #f88cf3;
+    font-weight: 1000; 
+    font-family: liquify;
 }
 
 /* =========================
@@ -115,7 +114,18 @@ main {
     border-radius: 10px;
 }
 
+.welcomegr {
+    grid-column: span 4 / span 4;
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 10;
+}
 
+.overheregr {
+    grid-column: span 2 / span 2;
+    grid-column-start: 8;
+    grid-row-start: 2;
+}
 
 /* =========================
    2. Tables
@@ -227,28 +237,6 @@ nav a {
 /* =========================
    5. Flex Containers
 ========================= */
-.welcomepos {
-    display: flex;
-    justify-content: flex-start;
-    /* align left */
-    align-items: flex-end;
-    /* align bottom */
-    height: 100%;
-    /* fill parent height */
-    padding: 0 20px 170px 50px;
-    /* top, right, bottom, left */
-    box-sizing: border-box;
-}
-
-.overherepos {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    height: 100%;
-    padding: 80px 50px 0 20px;
-    /* top, right, bottom, left */
-    box-sizing: border-box;
-}
 
 .container3 {
     display: flex;
@@ -271,42 +259,31 @@ nav a {
 }
 
 /* =========================
-   6. Flex Items / Text Blocks
+decoration
 ========================= */
-.welcome {
-    width: auto;
-    font-family: 'Nunito', sans-serif;
-    color: #204e8a;
-    font-size: clamp(18px, 2vw, 25px);
-    pointer-events: none;
-    text-align: center;
-}
-
-/* =========================
-   7. Decorative / Positioned Elements
-========================= */
-.over-here {
-    font-family: 'Nunito', sans-serif;
-    position: absolute;
-    top: 150px;
-    right: 540px;
-    z-index: -1;
-    pointer-events: none;
-    color: #204e8a;
-    transform: rotate(15deg);
-}
 
 .curvedname {
-    position: absolute;
-    top: 10;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'liquify', sans-serif;
-    font-size: 60px;
-    fill: #1e2b52;
-    z-index: -1;
-    pointer-events: none;
+  position: absolute;
+  top: 0;   
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  font-family: 'liquify', sans-serif;
+  font-size: 60px;
+
+  z-index: -1;            /* behind everything */
+  pointer-events: none;   /* clicks pass through */
+}
+
+.curvedname-container {
+  position: fixed;   /* stays in background even while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .curvedname text {
@@ -314,6 +291,23 @@ nav a {
     fill: #39ff14;
 }
 
+.welcometext {
+    font-family: 'Nunito', sans-serif;
+    color: #204e8a;
+    font-size: 45px;
+    pointer-events: none;
+    text-align: center;
+    font-weight: 850;
+
+}
+
+.overhere {
+    font-family: 'Nunito', sans-serif;
+    color: #204e8a;
+    font-size: clamp(18px, 2vw, 25px);
+    pointer-events: none;
+    text-align: center;
+}
 
 .text-changer {
     height: 40px;
