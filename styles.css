@@ -29,6 +29,17 @@ main {
     display: block;
 }
 
+a {
+  color: #2e66af; /* your custom color */
+}
+
+a:hover,
+a:active,
+a:visited:hover {
+  color: #d181ff; /* pastel purple when hovered even if visited */
+}
+
+
 /* Font Faces */
 @font-face {
     font-family: 'liquify';
@@ -74,13 +85,13 @@ main {
    2. Grid Items
 ========================= */
 
-.div1 {
+.grid1 {
     grid-column: span 12 / span 12;
     grid-row: span 3 / span 3;
     padding: 10px;
 }
 
-.div2 {
+.grid2 {
     grid-column: span 12 / span 12;
     grid-row: span 3 / span 3;
     grid-row-start: 4;
@@ -100,14 +111,14 @@ main {
     height: 100%;
 }
 
-.div3 {
+.grid3 {
     grid-column: span 12 / span 12;
     grid-row: span 3 / span 3;
     grid-row-start: 7;
     padding: 10px;
 }
 
-.div4 {
+.grid4 {
     grid-column: span 12 / span 12;
     grid-row: span 3 / span 3;
     grid-row-start: 10;
