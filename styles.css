@@ -8,11 +8,15 @@
 html,
 body,
 {
-height: 100%;
+height: auto;
 width: 100%;
 margin: 0;
 padding: 0;
 overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -21,14 +25,9 @@ body {
 
 main {
     height: auto;
-    /* let content decide */
     overflow: visible;
-    /* don’t create its own scroll */
     display: block;
-    /* ensure normal flow */
 }
-
-/* temp. color = #ffffff Main color = #050f29 */
 
 /* Font Faces */
 @font-face {
@@ -37,14 +36,15 @@ main {
 }
 
 @font-face {
-  font-family: 'mayego';
-  src: url('mayego-demo.ttf') format('truetype');
+    font-family: 'mayego';
+    src: url('mayego-demo.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'mochibop';
-  src: url('mochibopbold-demo.ttf') format('truetype');
+    font-family: 'mochibop';
+    src: url('mochibopbold-demo.ttf') format('truetype');
 }
+
 /* =========================
    2. Grid Layout
 ========================= */
@@ -61,12 +61,13 @@ main {
 
 .grid h1 {
     color: #f88cf3;
-    font-weight: 1000; 
+    font-weight: 1000;
     font-family: liquify;
 }
 
 .grid p {
     font-family: mochibop;
+    color: #2e66af;
 }
 
 /* =========================
@@ -126,6 +127,16 @@ main {
     border-radius: 10px;
 }
 
+.socialsgr {
+    grid-column: span 12 / span 12;
+    grid-row: span 3 / span 3;
+    grid-row-start: 13;
+    padding: 10px;
+    display: grid;
+    align-items: center;
+    grid-column-start: 3;
+}
+
 .welcomegr {
     grid-column: span 4 / span 4;
     grid-row: span 3 / span 3;
@@ -159,7 +170,7 @@ td {
 }
 
 tr:nth-child(even) {
-    background-color: #192d5f;
+    background-color: #102864;
 }
 
 tr:nth-child(odd) {
@@ -191,7 +202,7 @@ nav a {
     padding: 10px 25px;
     border-radius: 30px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
 }
 
 .navbar a {
@@ -275,27 +286,30 @@ decoration
 ========================= */
 
 .curvedname {
-  position: absolute;
-  top: 0;   
-  left: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
-  font-family: 'liquify', sans-serif;
-  font-size: 60px;
+    font-family: 'liquify', sans-serif;
+    font-size: 60px;
 
-  z-index: -1;            /* behind everything */
-  pointer-events: none;   /* clicks pass through */
+    z-index: -1;
+    /* behind everything */
+    pointer-events: none;
+    /* clicks pass through */
 }
 
 .curvedname-container {
-  position: fixed;   /* stays in background even while scrolling */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
+    position: fixed;
+    /* stays in background even while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .curvedname text {
@@ -304,7 +318,6 @@ decoration
 }
 
 .welcometext {
-    color: #204e8a;
     font-size: 45px;
     pointer-events: none;
     text-align: center;
@@ -323,8 +336,8 @@ decoration
     padding: 10px;
     border-radius: 8px;
     display: flex;
-    color: #204e8a;
-    font-family: 'Nunito', sans-serif;
+    color: #2e66af;
+    font-family: 'mochibop', sans-serif;
     font-size: 25px;
     font-weight: 500;
     box-sizing: content-box;
@@ -355,17 +368,13 @@ decoration
 }
 
 .hztext {
-    font-family: 'Nunito', sans-serif;
-    pointer-events: none;
-    color: #204e8a;
+    pointer-events: auto;
     font-size: 30px;
-    max-width: 1250px;
+    max-width: 1450px;
 }
 
 
 .mygftext {
-    font-family: 'Nunito', sans-serif;
-    color: #204e8a;
     font-size: 30px;
     max-width: 1000px;
     text-align: right;
@@ -382,10 +391,8 @@ decoration
 }
 
 .gamingtext {
-    font-family: 'Nunito', sans-serif;
-    color: #204e8a;
     font-size: 30px;
-    max-width: 1250px;
+    max-width: 1450px;
     text-align: left;
 }
 
@@ -405,14 +412,32 @@ decoration
 }
 
 .liftertext {
-    font-family: 'Nunito', sans-serif;
     pointer-events: none;
-    color: #204e8a;
     font-size: 30px;
     max-width: 1250px;
     text-align: right;
     justify-self: end;
 
+}
+
+.socialstext {
+    pointer-events: auto;
+    font-size: 30px;
+    max-width: 1250px;
+    text-align: center;
+}
+
+.socialsicons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.socialsicons img {
+   filter: invert(32%) sepia(61%) saturate(668%) hue-rotate(173deg) brightness(90%) contrast(92%);
+}
+
+.socialsicons p {
+    color: #d181ff;
 }
 
 /* =========================
