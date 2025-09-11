@@ -30,13 +30,15 @@ main {
 }
 
 a {
-  color: #2e66af; /* your custom color */
+    color: #2e66af;
+    /* your custom color */
 }
 
 a:hover,
 a:active,
 a:visited:hover {
-  color: #d181ff; /* pastel purple when hovered even if visited */
+    color: #d181ff;
+    /* pastel purple when hovered even if visited */
 }
 
 
@@ -264,8 +266,149 @@ nav a {
 /* =========================
    4. Utility / Page
 ========================= */
-.index-page {
+
+#blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.blog-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blog-heading span {
+    font-family: mochibop;
+    color: #2e66af;
+    font-size: 2.4rem
+}
+
+.wavy-text span {
+    font-size: 6.4rem;
+    color: #f88cf3;
+    font-weight: 1000;
+    font-family: liquify;
+}
+
+.wavy-text {
+  display: inline-block;
+}
+
+.wavy-text span {
+  display: inline-block;
+  animation: warp 5s infinite ease-in-out;
+}
+
+.wavy-text span:nth-child(1) { animation-delay: 0s; }
+.wavy-text span:nth-child(2) { animation-delay: 0.1s; }
+.wavy-text span:nth-child(3) { animation-delay: 0.2s; }
+.wavy-text span:nth-child(4) { animation-delay: 0.3s; }
+.wavy-text span:nth-child(5) { animation-delay: 0.4s; }
+.wavy-text span:nth-child(6) { animation-delay: 0.5s; }
+.wavy-text span:nth-child(7) { animation-delay: 0.6s; }
+/* continue for all letters */
+
+@keyframes warp {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) skewX(0deg);
+  }
+  25% {
+    transform: translateY(-20px) rotate(-5deg) skewX(-5deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(5deg) skewX(5deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(-3deg) skewX(-3deg);
+  }
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+
+.blog-box {
+    width: 350px;
+    background: radial-gradient(100% 100% at var(--4-x-position) var(--4-y-position), #0a1944 0%, transparent),
+        radial-gradient(100% 100% at var(--5-x-position) var(--5-y-position), #5f1a5d96 0%, transparent), #31230686;
+    animation-name: main;
+    animation-iteration-count: infinite;
+    animation-duration: 14s;
+    transition-timing-function: ease-in border-radius: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    transition: transform 0.6s ease, box-shadow 0.5s ease;
+}
+
+.blog-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgb(248, 140, 243)
+}
+
+.blog-img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.blog-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    font-family: mochibop;
+}
+
+.blog-text span {
+    color: #2e66af;
+    font-size: 0.9rem;
+}
+
+.blog-text .blog-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #91c1ff;
+}
+
+.blog-text .blog-title:hover {
+    color: rgb(192, 131, 216);
+    transition: all ea
+}
+
+.blog-text p {
+    color: #7099ce;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+
+.blog-text a {
+    color: #2e66af;
+}
+
+.blog-text a:hover {
+    color: rgb(206, 163, 255);
+    transition: all ease 0.3s;
 }
 
 /* =========================
@@ -444,7 +587,7 @@ decoration
 }
 
 .socialsicons img {
-   filter: invert(32%) sepia(61%) saturate(668%) hue-rotate(173deg) brightness(90%) contrast(92%);
+    filter: invert(32%) sepia(61%) saturate(668%) hue-rotate(173deg) brightness(90%) contrast(92%);
 }
 
 .socialsicons p {
