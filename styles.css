@@ -669,7 +669,6 @@ decoration
 .gaming {
     width: 500px;
     float: left;
-    shape-outside: circle(50%);
 }
 
 .lifter {
