@@ -713,6 +713,52 @@ decoration
     color: #d181ff;
 }
 
+.sticker1 {
+  width: 14vw;  
+  position: fixed;
+  top: 20vh;    
+  left: 55vw;
+  height: auto;
+  transform: rotate(7deg); /* rotates 15 degrees */
+  pointer-events: none;
+}
+.sticker2 {
+  width: 14vw;  
+  position: fixed;
+  top: 20vh;    
+  left: 55vw;
+  height: auto;
+  transform: rotate(7deg); /* rotates 15 degrees */
+  pointer-events: none;
+}
+.sticker3 {
+  width: 14vw;  
+  position: fixed;
+  top: 20vh;    
+  left: 55vw;
+  height: auto;
+  transform: rotate(7deg); /* rotates 15 degrees */
+  pointer-events: none;
+}
+.sticker4 {
+  width: 14vw;  
+  position: fixed;
+  top: 20vh;    
+  left: 55vw;
+  height: auto;
+  transform: rotate(7deg); /* rotates 15 degrees */
+  pointer-events: none;
+}
+.sticker5 {
+  width: 14vw;  
+  position: fixed;
+  top: 20vh;    
+  left: 55vw;
+  height: auto;
+  transform: rotate(7deg); /* rotates 15 degrees */
+  pointer-events: none;
+}
+
 /* =========================
    8. Animations
 ========================= */
