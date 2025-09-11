@@ -578,7 +578,7 @@ decoration
 }
 
 .welcometext {
-    font-size: 45px;
+    font-size: 35px;
     pointer-events: none;
     text-align: center;
     font-weight: 850;
@@ -717,47 +717,48 @@ decoration
 
 .sticker1 {
   width: 14vw;  
-  position: fixed;
-  top: 20vh;    
-  left: 55vw;
+  position: absolute;
+  top: 30vh;    
+  left: 15vw;
   height: auto;
-  transform: rotate(7deg); /* rotates 15 degrees */
+  transform: rotate(7deg); 
   pointer-events: none;
 }
 .sticker2 {
   width: 14vw;  
-  position: fixed;
-  top: 20vh;    
-  left: 55vw;
+  position: absolute;
+  top: 10vh;    
+  right: 5vw;
   height: auto;
-  transform: rotate(7deg); /* rotates 15 degrees */
+  transform: rotate(10deg); 
   pointer-events: none;
 }
 .sticker3 {
-  width: 14vw;  
-  position: fixed;
-  top: 20vh;    
-  left: 55vw;
+  width: 20vw;  
+  position: absolute;
+  top: 10vh;    
+  right: 0vw;
   height: auto;
-  transform: rotate(7deg); /* rotates 15 degrees */
-  pointer-events: none;
+  transform: rotate(15deg); 
+  pointer-events: absolute;
 }
 .sticker4 {
-  width: 14vw;  
-  position: fixed;
-  top: 20vh;    
-  left: 55vw;
+  width: 20vw;  
+  position: absolute;
+  top: 25vh;    
+  left: 0vw;
   height: auto;
-  transform: rotate(7deg); /* rotates 15 degrees */
+  transform: rotate(-15deg); 
   pointer-events: none;
+
 }
 .sticker5 {
-  width: 14vw;  
-  position: fixed;
-  top: 20vh;    
-  left: 55vw;
+  width: 20vw;  
+  position: absolute;
+  top: 15vh;    
+  right: 10vw;
   height: auto;
-  transform: rotate(7deg); /* rotates 15 degrees */
+  transform: rotate(7deg); 
   pointer-events: none;
 }
 
