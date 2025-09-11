@@ -150,6 +150,14 @@ a:visited:hover {
     grid-column-start: 3;
 }
 
+.socialshover {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.socialshover:hover {
+    transform: scale(1.1);
+}
+
 .welcomegr {
     grid-column: span 4 / span 4;
     grid-row: span 3 / span 3;
@@ -388,7 +396,7 @@ nav a {
 
 .blog-text .blog-title:hover {
     color: rgb(192, 131, 216);
-    transition: all ea
+    transition: all ease;
 }
 
 .blog-text p {
