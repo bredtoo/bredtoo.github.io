@@ -23,6 +23,10 @@ body {
     background-color: #050f29;
 }
 
+body.index-page {
+  overflow: hidden; /* locks scroll only on index.html */
+}
+
 main {
     height: auto;
     overflow: visible;
