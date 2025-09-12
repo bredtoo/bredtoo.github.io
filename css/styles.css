@@ -545,6 +545,17 @@ svg {
 decoration
 ========================= */
 
+.beta-text {
+    font-family: mochibop;
+    color: #5a6c84;
+    font-size: small;
+    position: fixed;
+    max-width: 200px;
+    text-align: center;
+    top: 4vh;
+    right: 0vw;
+}
+
 .curvedname {
     position: absolute;
     top: 0;
