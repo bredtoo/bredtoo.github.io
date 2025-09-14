@@ -1,0 +1,456 @@
+/* =========================
+        BASE end
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body
+{
+height: auto;
+width: 100%;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #050f29;
+}
+
+main {
+    height: auto;
+    overflow: visible;
+    display: block;
+}
+
+a {
+    color: #2e66af;
+}
+
+a:hover,
+a:active,
+a:visited:hover {
+    color: #d181ff;
+    /* pastel purple when hovered even if visited */
+}
+
+
+/* Font Faces */
+@font-face {
+    font-family: 'liquify';
+    src: url(../fonts/liquify.regular.otf);
+}
+
+@font-face {
+    font-family: 'mayego';
+    src: url('../fonts/mayego-demo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'mochibop';
+    src: url('../fonts/mochibopbold-demo.ttf') format('truetype');
+}
+
+/* =========================
+        BASE end
+========================= */
+
+/* ============== Navbar Start ============== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 20px 30px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    color: #204e8a;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: #204e8a;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #204e8a;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.navbar a.active {
+    color: #fff;
+    transform: translateY(-2px);
+    background: linear-gradient(90deg,
+            #5569d1,
+            #7a7fff,
+            #a66cff,
+            #d181ff,
+            #ff7ff5,
+            #d181ff,
+            #a66cff,
+            #7a7fff,
+            #5569d1);
+    background-size: 300% 300%;
+    animation: gradientFlow 10s linear infinite;
+}
+
+.navbar a.active:hover {
+    color: #fff;
+    background: linear-gradient(90deg,
+            #5569d1,
+            #7a7fff,
+            #a66cff,
+            #d181ff,
+            #ff7ff5,
+            #d181ff,
+            #a66cff,
+            #7a7fff,
+            #5569d1);
+    background-size: 300% 300%;
+    animation: gradientFlow 10s linear infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+}
+/* ============== Navbar End ============== */
+
+/* ============== Intro Text Change start ============== */
+.rolespos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    padding: 40px 20px 0 130px;
+    /* top, right, bottom, left */
+    box-sizing: border-box;
+}
+
+.text-changer {
+    height: 40px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    color: #2e66af;
+    font-family: 'mochibop', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    box-sizing: content-box;
+    transform: scale(3);
+}
+
+.intro-text {
+    margin-top: -2px;
+}
+
+.roles-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.role {
+    display: block;
+    height: 100%;
+    padding-left: 6px;
+    color: #f88cf3;
+    animation: role-change 5s infinite;
+}
+
+@keyframes role-change {
+    10% {
+        transform: translateY(-102%);
+    }
+
+    25% {
+        transform: translateY(-100%);
+    }
+
+    35% {
+        transform: translateY(-202%);
+    }
+
+    50% {
+        transform: translateY(-200%);
+    }
+
+    60% {
+        transform: translateY(-302%);
+    }
+
+    75% {
+        transform: translateY(-300%);
+    }
+
+    85% {
+        transform: translateY(-402%);
+    }
+
+    100% {
+        transform: translateY(-400%);
+    }
+}
+/* ============== Intro Text Change end ============== */
+
+/* ============== grid start ============== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, auto);
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.grid h1 {
+    color: #f88cf3;
+    font-weight: 1000;
+    font-family: liquify;
+}
+
+.grid p {
+    font-family: mochibop;
+    color: #2e66af;
+}
+
+.grid1 {
+    grid-column: span 12 / span 12;
+    grid-row: span 3 / span 3;
+    padding: 10px;
+}
+
+.grid2 {
+    grid-column: span 12 / span 12;
+    grid-row: span 3 / span 3;
+    grid-row-start: 4;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+
+    gap: 20px;
+    background: radial-gradient(100% 100% at var(--4-x-position) var(--4-y-position), #0a1944 0%, transparent),
+        radial-gradient(100% 100% at var(--5-x-position) var(--5-y-position), #220d33 0%, transparent), #050f29;
+    animation-name: main;
+    animation-iteration-count: infinite;
+    animation-duration: 14s;
+    transition-timing-function: ease-in; 
+    border-radius: 10px;
+    height: 100%;
+}
+
+.grid3 {
+    grid-column: span 12 / span 12;
+    grid-row: span 3 / span 3;
+    grid-row-start: 7;
+    padding: 10px;
+}
+
+.grid4 {
+    grid-column: span 12 / span 12;
+    grid-row: span 3 / span 3;
+    grid-row-start: 10;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+
+    gap: 20px;
+    background: radial-gradient(100% 100% at var(--4-x-position) var(--4-y-position), #0a1944 0%, transparent),
+        radial-gradient(100% 100% at var(--5-x-position) var(--5-y-position), #220d33 0%, transparent), #050f29;
+    animation-name: main;
+    animation-iteration-count: infinite;
+    animation-duration: 14s;
+    transition-timing-function: ease-in;
+    border-radius: 10px;
+    height: 100%;
+}
+
+/* ============== grid anim start ============== */
+
+@property --4-x-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 20%;
+}
+
+@property --4-y-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 80%;
+}
+
+@property --5-x-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 80%;
+}
+
+@property --5-y-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 20%;
+}
+
+
+:root {
+
+    --4-x-position: 20%;
+    --4-y-position: 80%;
+    --5-x-position: 80%;
+    --5-y-position: 20%;
+}
+
+
+@keyframes main {
+    25% {
+        --4-x-position: 15%;
+        --4-y-position: 15%;
+        --5-x-position: 85%;
+        --5-y-position: 80%;
+    }
+
+    50% {
+        --4-x-position: 80%;
+        --4-y-position: 15%;
+        --5-x-position: 15%;
+        --5-y-position: 85%;
+    }
+}
+/* ============== grid anim end ============== */
+
+.socialsgr {
+    grid-column: span 12 / span 12;
+    grid-row: span 3 / span 3;
+    grid-row-start: 13;
+    padding: 10px;
+    display: grid;
+    align-items: center;
+    grid-column-start: 2;
+}
+
+.socialshover {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.socialshover:hover {
+    transform: scale(1.1);
+}
+
+/* ============== grid end ============== */
+
+.hzlogo {
+    width: 500px;
+    float: left;
+    shape-outside: circle(50%);
+}
+
+.hztext {
+    pointer-events: auto;
+    font-size: 30px;
+    max-width: 1450px;
+}
+
+
+.mygftext {
+    font-size: 30px;
+    max-width: 1000px;
+    text-align: right;
+    justify-self: end;
+}
+
+.mygf {
+    width: 650px;
+    height: auto;
+    border-radius: 20px;
+    padding: 8px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.gamingtext {
+    font-size: 30px;
+    max-width: 1450px;
+    text-align: left;
+}
+
+.gaming {
+    width: 500px;
+    float: left;
+}
+
+.lifter {
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+    padding: 8px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.liftertext {
+    pointer-events: none;
+    font-size: 30px;
+    max-width: 1250px;
+    text-align: right;
+    justify-self: end;
+
+}
+
+.socialstext {
+    pointer-events: auto;
+    font-size: 30px;
+    max-width: 1250px;
+    text-align: center;
+}
+
+.socialsicons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.socialsicons img {
+    filter: invert(32%) sepia(61%) saturate(668%) hue-rotate(173deg) brightness(90%) contrast(92%);
+}
+
+.socialsicons p {
+    color: #d181ff;
+}
+
+.sticker2 {
+  width: 14vw;  
+  position: absolute;
+  top: 10vh;    
+  right: 5vw;
+  height: auto;
+  transform: rotate(10deg); 
+  pointer-events: none;
+}
