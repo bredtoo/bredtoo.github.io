@@ -253,6 +253,56 @@ nav a {
     transition: transform 0.6s ease, box-shadow 0.5s ease;
 }
 
+@property --4-x-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 20%;
+}
+
+@property --4-y-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 80%;
+}
+
+@property --5-x-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 80%;
+}
+
+@property --5-y-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 20%;
+}
+
+
+:root {
+
+    --4-x-position: 20%;
+    --4-y-position: 80%;
+    --5-x-position: 80%;
+    --5-y-position: 20%;
+}
+
+
+@keyframes main {
+    25% {
+        --4-x-position: 15%;
+        --4-y-position: 15%;
+        --5-x-position: 85%;
+        --5-y-position: 80%;
+    }
+
+    50% {
+        --4-x-position: 80%;
+        --4-y-position: 15%;
+        --5-x-position: 15%;
+        --5-y-position: 85%;
+    }
+}
+
 .blog-box:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px rgb(248, 140, 243)
