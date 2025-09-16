@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #050f29;
+}
+
+body.index-page {
+}
+
+main {
+    height: auto;
+    overflow: visible;
+    display: block;
+}
+
+a {
+    color: #2e66af;
+}
+
+a:hover,
+a:active,
+a:visited:hover {
+    color: #d181ff;
+}
+
+@font-face {
+    font-family: 'liquify';
+    src: url(../fonts/liquify.regular.otf);
+}
+
+@font-face {
+    font-family: 'mochibop';
+    src: url('../fonts/mochibopbold-demo.ttf') format('truetype');
+}
+
+
+/* ============== Navbar Start ============== */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 20px 30px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    color: #204e8a;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: #204e8a;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #204e8a;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.navbar a.active {
+    color: #fff;
+    transform: translateY(-2px);
+    background: linear-gradient(90deg,
+            #5569d1,
+            #7a7fff,
+            #a66cff,
+            #d181ff,
+            #ff7ff5,
+            #d181ff,
+            #a66cff,
+            #7a7fff,
+            #5569d1);
+    background-size: 300% 300%;
+    animation: gradientFlow 10s linear infinite;
+}
+
+.navbar a.active:hover {
+    color: #fff;
+    background: linear-gradient(90deg,
+            #5569d1,
+            #7a7fff,
+            #a66cff,
+            #d181ff,
+            #ff7ff5,
+            #d181ff,
+            #a66cff,
+            #7a7fff,
+            #5569d1);
+    background-size: 300% 300%;
+    animation: gradientFlow 10s linear infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+}
+/* ============== Navbar End ============== */
+
+
+/* ============== Curved name bg start ============== */
+.curvedname {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    font-family: 'liquify', sans-serif;
+    font-size: 60px;
+
+    z-index: -1;
+    /* behind everything */
+    pointer-events: none;
+    /* clicks pass through */
+}
+
+.curvedname-container {
+    position: fixed;
+    /* stays in background even while scrolling */
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.curvedname text {
+    animation: pulseColor 5s infinite linear;
+    fill: #39ff14;
+}
+
+@keyframes pulseColor {
+    0% {
+        fill: #5569d1;
+    }
+
+    20% {
+        fill: #7a7fff;
+    }
+
+    30% {
+        fill: #a66cff;
+    }
+
+    40% {
+        fill: #d181ff;
+    }
+
+    50% {
+        fill: #ff7ff5;
+    }
+
+    60% {
+        fill: #d181ff;
+    }
+
+    70% {
+        fill: #a66cff;
+    }
+
+    80% {
+        fill: #7a7fff;
+    }
+
+    100% {
+        fill: #5569d1;
+    }
+}
+/* ============== Curved name bg end ============== */
+
+.welcometext {
+    font-size: 35px;
+    pointer-events: none;
+    text-align: center;
+    font-weight: 850;
+    top: 50vh;
+    left: 5vw;
+    position: fixed;
+}
+
+.welcometext h1 {
+    color: #f88cf3;
+}
+
+.welcometext p {
+    font-family: mochibop;
+    color: #2e66af;
+}
+
+.overheretext {
+    font-size: clamp(18px, 2vw, 25px);
+    transform: rotate(10deg);
+    pointer-events: none;
+    text-align: center;
+    color: #f88cf3;
+    top: 13vh;
+    right: 30vw;
+    position: fixed;
+}
+
+.sticker1 {
+  width: 14vw;  
+  position: absolute;
+  top: 30vh;    
+  left: 15vw;
+  height: auto;
+  transform: rotate(7deg); 
+  pointer-events: none;
+}

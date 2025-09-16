@@ -1,0 +1,178 @@
+/* =========================
+        BASE start
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body
+{
+height: auto;
+width: 100%;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #050f29;
+}
+
+main {
+    height: auto;
+    overflow: visible;
+    display: block;
+}
+
+a {
+    color: #2e66af;
+}
+
+a:hover,
+a:active,
+a:visited:hover {
+    color: #d181ff;
+    /* pastel purple when hovered even if visited */
+}
+
+
+/* Font Faces */
+@font-face {
+    font-family: 'liquify';
+    src: url(../fonts/liquify.regular.otf);
+}
+
+@font-face {
+    font-family: 'mayego';
+    src: url('../fonts/mayego-demo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'mochibop';
+    src: url('../fonts/mochibopbold-demo.ttf') format('truetype');
+}
+
+/* =========================
+        BASE end
+========================= */
+
+/* ============== Navbar Start ============== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 20px 30px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    color: #204e8a;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: #204e8a;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #204e8a;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.navbar a.active {
+    color: #fff;
+    transform: translateY(-2px);
+    background: linear-gradient(90deg,
+            #5569d1,
+            #7a7fff,
+            #a66cff,
+            #d181ff,
+            #ff7ff5,
+            #d181ff,
+            #a66cff,
+            #7a7fff,
+            #5569d1);
+    background-size: 300% 300%;
+    animation: gradientFlow 10s linear infinite;
+}
+
+.navbar a.active:hover {
+    color: #fff;
+    background: linear-gradient(90deg,
+            #5569d1,
+            #7a7fff,
+            #a66cff,
+            #d181ff,
+            #ff7ff5,
+            #d181ff,
+            #a66cff,
+            #7a7fff,
+            #5569d1);
+    background-size: 300% 300%;
+    animation: gradientFlow 10s linear infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+}
+/* ============== Navbar End ============== */
+table,
+th,
+td {
+    border: 15px solid transparent;
+    border-collapse: collapse;
+    border-radius: 10px;
+    color: white;
+    font-family: 'mochibopbold', sans-serif;
+    text-align: center;
+    padding: 8px;
+    width: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr:nth-child(even) {
+    background-color: #102864;
+}
+
+tr:nth-child(odd) {
+    background-color: #001753;
+}
+
+.sticker4 {
+  width: 20vw;  
+  position: absolute;
+  top: 25vh;    
+  left: 0vw;
+  height: auto;
+  transform: rotate(-15deg); 
+  pointer-events: none;
+
+}
