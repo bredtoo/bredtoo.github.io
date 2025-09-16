@@ -9,7 +9,7 @@ faqs.forEach(faq => {
       faq.classList.remove("active");
       answer.style.maxHeight = null;
     } else {
-      // закрытие других активных блоков
+
       faqs.forEach(otherFaq => {
         if (otherFaq.classList.contains("active")) {
           otherFaq.classList.remove("active");
