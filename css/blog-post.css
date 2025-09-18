@@ -159,7 +159,7 @@ nav a {
     white-space: nowrap;
     overflow: hidden;
     animation:
-        typing 2s steps(16),
+        typing 2s steps(var(--steps)),
         cursor .4s step-end infinite alternate;
 }
 
@@ -200,4 +200,9 @@ nav a {
 .spacer {
     display: block;
     height: 30px; /* space between lines */
+}
+
+.minispacer {
+    display: block;
+    height: 10px; /* space between lines */
 }
