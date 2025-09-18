@@ -1,0 +1,203 @@
+/* =========================
+        BASE start
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body
+{
+height: auto;
+width: 100%;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #050f29;
+}
+
+main {
+    height: auto;
+    overflow: visible;
+    display: block;
+}
+
+a {
+    color: #2e66af;
+}
+
+a:hover,
+a:active,
+a:visited:hover {
+    color: #d181ff;
+    /* pastel purple when hovered even if visited */
+}
+
+
+/* Font Faces */
+@font-face {
+    font-family: 'liquify';
+    src: url(../fonts/liquify.regular.otf);
+}
+
+@font-face {
+    font-family: 'mayego';
+    src: url('../fonts/mayego-demo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'mochibop';
+    src: url('../fonts/mochibopbold-demo.ttf') format('truetype');
+}
+
+/* =========================
+        BASE end
+========================= */
+
+/* ============== Navbar Start ============== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 20px 30px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    color: #204e8a;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: #204e8a;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #204e8a;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.navbar a.active {
+    color: #fff;
+    transform: translateY(-2px);
+    background: linear-gradient(90deg,
+            #5569d1,
+            #7a7fff,
+            #a66cff,
+            #d181ff,
+            #ff7ff5,
+            #d181ff,
+            #a66cff,
+            #7a7fff,
+            #5569d1);
+    background-size: 300% 300%;
+    animation: gradientFlow 10s linear infinite;
+}
+
+.navbar a.active:hover {
+    color: #fff;
+    background: linear-gradient(90deg,
+            #5569d1,
+            #7a7fff,
+            #a66cff,
+            #d181ff,
+            #ff7ff5,
+            #d181ff,
+            #a66cff,
+            #7a7fff,
+            #5569d1);
+    background-size: 300% 300%;
+    animation: gradientFlow 10s linear infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+}
+/* ============== Navbar End ============== */
+
+/* ============== HEADER start ============== */
+
+.container { display: inline-block; padding-left: 3em;}
+
+.blog-header {
+    font-size: 6em;
+    letter-spacing: 1px;
+    font-family: liquify;
+    color: #f88cf3;
+    font-weight: bold;
+    align-items: center;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(16),
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% { border-color: transparent }
+}
+
+@keyframes typing {
+    from { width: 0}
+}
+
+
+/* ============== HEADER end ============== */
+
+.blog-content h2 {
+    color: #a36bb4;
+    font-family: mochibop;
+    font-size: 2em;
+    padding-left: 2em;
+}
+
+.blog-content p {
+    color: #5569d1;
+    font-family: mochibop;
+    font-size: 1.5em;
+    padding-left: 3em;
+    max-width: 70em;
+}
+
+.blog-list {
+    color: #8393e0;
+    font-family: mochibop;
+    font-size: 1.5em;
+    padding-left: 5em;
+    max-width: 70em;
+}
+
+.spacer {
+    display: block;
+    height: 30px; /* space between lines */
+}
