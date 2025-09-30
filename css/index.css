@@ -242,17 +242,17 @@ p {
     left: 1vw;
     font-size: clamp(25px, 2vw, 30px);
     color: #f88cf3;
-    max-width: 1300px;
+    max-width: 1000px;
 }
 
 .paragraph2 {
     position: absolute;
-    top: 135vh;
+    top: 150vh;
     right: 1vw;
     font-size: clamp(25px, 2vw, 30px);
     color: #f88cf3;
     text-align: right;
-    max-width: 1300px;
+    max-width: 1000px;
 }
 
 .paragraph2 p {
@@ -274,7 +274,7 @@ p {
     position: absolute;
     width: 20em;
     left: 5vw;
-    top: 150vh;
+    top: 165vh;
 }
 
 .sticker1 {
