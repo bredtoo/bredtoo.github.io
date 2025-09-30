@@ -175,7 +175,7 @@ nav a {
 /* ============== HEADER end ============== */
 
 .blog-content h2 {
-    color: #a36bb4;
+    color: #8a42ff;
     font-family: mochibop;
     font-size: 2em;
     padding-left: 2em;
@@ -187,6 +187,13 @@ nav a {
     font-size: 1.5em;
     padding-left: 3em;
     max-width: 70em;
+}
+
+.blog-content h3 {
+    color: #8a42ff;
+    font-family: mochibop;
+    font-size: 1.5em;
+    padding-left: 3em;
 }
 
 .blog-list {

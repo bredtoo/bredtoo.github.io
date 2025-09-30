@@ -4,7 +4,6 @@
 
 html,
 body {
-    height: auto;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -17,9 +16,6 @@ html {
 
 body {
     background-color: #050f29;
-}
-
-body.index-page {
 }
 
 main {
@@ -151,7 +147,7 @@ nav a {
 }
 
 .curvedname-container {
-    position: fixed;
+    position: absolute;
     /* stays in background even while scrolling */
     top: 10vh;
     left: 0;
@@ -204,6 +200,20 @@ nav a {
     }
 }
 /* ============== Curved name bg end ============== */
+h1 {
+    color: #f88cf3;
+    font-family: 'liquify', sans-serif;
+}
+
+h2 {
+    color: #f88cf3;
+    font-family: 'liquify', sans-serif;
+}
+
+p {
+    font-family: mochibop, sans-serif;
+    color: #0072bb;
+}
 
 .welcometext {
     font-size: 35px;
@@ -212,16 +222,7 @@ nav a {
     font-weight: 850;
     top: 50vh;
     left: 5vw;
-    position: fixed;
-}
-
-.welcometext h1 {
-    color: #f88cf3;
-}
-
-.welcometext p {
-    font-family: mochibop;
-    color: #2e66af;
+    position: absolute;
 }
 
 .overheretext {
@@ -232,7 +233,48 @@ nav a {
     color: #f88cf3;
     top: 13vh;
     right: 30vw;
-    position: fixed;
+    position: absolute;
+}
+
+.paragraph1 {
+    position: absolute;
+    top: 90vh;
+    left: 1vw;
+    font-size: clamp(25px, 2vw, 30px);
+    color: #f88cf3;
+    max-width: 1300px;
+}
+
+.paragraph2 {
+    position: absolute;
+    top: 135vh;
+    right: 1vw;
+    font-size: clamp(25px, 2vw, 30px);
+    color: #f88cf3;
+    text-align: right;
+    max-width: 1300px;
+}
+
+.paragraph2 p {
+    color: #0072bb;
+}
+
+.paragraph2 ol {
+    list-style-position: inside;
+}
+
+.ict-image {
+    position: absolute;
+    width: 20em;
+    right: 4vw;
+    top: 99vh;
+}
+
+.fransblauw {
+    position: absolute;
+    width: 20em;
+    left: 5vw;
+    top: 150vh;
 }
 
 .sticker1 {
