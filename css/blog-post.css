@@ -213,3 +213,9 @@ nav a {
     display: block;
     height: 10px; /* space between lines */
 }
+
+.footer {
+    font-family: mochibop;
+    color: #f88cf3;
+    padding-left: 4em;
+}
